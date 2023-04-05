@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Калькулятор</title>
+</head>
+<body>
+	
+	<input id="num1" />  
+
+	 
+	<div id="operator_btns">
+	  <button id="plus" onclick="op='+'">+</button>
+	  <button id="minus" onclick="op='-'">-</button>
+	  <button id="times" onclick="op='*'">x</button>
+	  <button id="divide" onclick="op='/'">:</button>
+    <button id="sqrt" onclick="op='sqrt'">sqrt</button>
+    <button id="!"onclick="op='!'">!</button>
+	</div>
+
+	 
+	<input id="num2" />  
+	<br>
+
+ 
+	<button onclick="func()">Посчитать</button> 
+
+	 
+	<p id="result"></p>
+
+	
+	<script>
+	  
+	  var op; // переменная, в которой хранится выбранное математическое действие
+
+	  
+	  function func() {   // функция расчёта
+	  	
+	    var result; // переменная  результата
+	    
+	    var num1 = Number(document.getElementById("num1").value);
+	    var num2 = Number(document.getElementById("num2").value);   // получаем первое и второе числo
+	    
+	    switch (op) {  //Она представляет собой более наглядный способ сравнить выражение сразу с несколькими вариантами.
+	      case '+':
+	        result = num1 + num2;
+	        break;
+	      case '-':
+	        result = num1 - num2;
+	        break;
+	      case '*':
+	        result = num1 * num2;
+	        break;
+	      case '/':
+	        result = num1 / num2;
+	        break;
+        case 'sqrt':
+          result = 
+          
+  
+	    }
+
+	    
+	    document.getElementById("result").innerHTML = result;  // результат на страницу
+	  }
+	</script>
+
+</body>
+</html>
